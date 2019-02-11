@@ -1,4 +1,4 @@
-FROM debian:sid
+FROM debian:buster
 LABEL maintainer="Brett Delle Grazie <brett.dellegrazie@gmail.com>"
 
 ENV container=docker DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical LANG=C.UTF-8
