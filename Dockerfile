@@ -1,13 +1,10 @@
 FROM debian:stretch
 LABEL maintainer="Brett Delle Grazie <brett.dellegrazie@gmail.com>"
 
-ENV container=docker DEBIAN_FRONTEND=noninteractive DEBIAN_PRIORITY=critical LANG=C.UTF-8
+ENV container=docker LANG=C.UTF-8
 
 # Enable all repos
 RUN sed -i 's/# deb/deb/g' /etc/apt/sources.list
-
-# Limit auto-installed dependencies
-RUN echo 'APT::Install-Recommends "0";\nAPT::Get::Assume-Yes "true";\nAPT::Install-Suggests "0";\n' > /etc/apt/apt.conf.d/01buildconfig
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
