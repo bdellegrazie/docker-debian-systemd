@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stretch-slim
 LABEL maintainer="Brett Delle Grazie <brett.dellegrazie@gmail.com>"
 
 ENV container=docker LANG=C.UTF-8
