@@ -3,9 +3,6 @@ LABEL maintainer="Brett Delle Grazie <brett.dellegrazie@gmail.com>"
 
 ENV container=docker LANG=C.UTF-8
 
-# Enable all repos
-RUN sed -i 's/# deb/deb/g' /etc/apt/sources.list
-
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
     dbus systemd systemd-cron rsyslog iproute2 python python-apt bash sudo ca-certificates && \
